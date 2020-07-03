@@ -21,10 +21,10 @@ $(document).ready(function() {
     });
 });
 $(document).ready(function() {
-    $('#task_delete').submit(function(e) {
+    $('.task_delete').submit(function(e) {
         e.preventDefault();
         $.ajax({
-            type: "GET",
+            type: "POST",
             url: 'delete.php',
             data: $(this).serialize(),
             success: function(response)

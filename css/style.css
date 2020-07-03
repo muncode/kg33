@@ -10,14 +10,15 @@ input {
     text-align: center;
     background-color: #51b4c1;
     transition: 0.5s;
-    border: 1px;
-    border-style: solid;
-    border-color: #51b4c1;
+    transition-timing-function: ease;
+    border: 1px solid #51b4c1;
+    outline: none !important;
 }
 
-input:hover {
+input:hover, input:active{
     color: #51b4c1;
     background-color: white;
+    outline: none !important;
 }
 
 .container {
@@ -49,21 +50,27 @@ form textarea:focus {
     outline: none;
 }
 
-#task_delete {
+.task_delete {
+    transition: 0.5s;
+    transition-timing-function: ease;
 }
 
-#task_delete .task {
+.task_delete:hover {
+    background-color: #51b4c1;
+}
+
+.task_delete .task {
     width: 90%;
     margin: 10px;
     padding: 0 5px;
 }
 
-#task_delete input {
+.task_delete input {
     width: 20px;
     height: 20px;
     margin: 10px;
 }
 
-#task_delete .task{
+.task_delete .task{
     overflow-x: hidden;
 }
